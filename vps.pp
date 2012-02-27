@@ -7,6 +7,7 @@
 include php-fastcgi
 include rsnapshot
 include gitconfig
+include nagios
 #
 # Puppet Configuration File
 # eMendo-IT - Wordpress Web Server
