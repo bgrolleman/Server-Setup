@@ -6,11 +6,12 @@
 ##
 include php-fastcgi
 include rsnapshot
+include gitconfig
 #
 # Puppet Configuration File
 # eMendo-IT - Wordpress Web Server
 
-package { [ 'nginx', 'php5', 'php5-cli', 'php5-cgi', 'php5-mysql', 'php5-gd', 'mysql-server', 'mysql-client', 'vim-nox', 'git', 'unzip', 'screen' ]:
+package { [ 'nginx', 'php5', 'php5-cli', 'php5-cgi', 'php5-mysql', 'php5-gd', 'mysql-server', 'mysql-client', 'vim-nox', 'unzip', 'screen' ]:
 	ensure => installed;
 }
 
