@@ -3,6 +3,6 @@ class php-fastcgi {
 		mode => 0755,
 		owner => root,
 		group => root,
-		source => 'puppet://modules/php-fastcgi/php-fastcgi'
+		source => 'puppet:///modules/php-fastcgi/php-fastcgi'
 	}
 }
