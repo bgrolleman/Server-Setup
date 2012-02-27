@@ -1,0 +1,22 @@
+config_version	1.2
+
+snapshot_root	/var/cache/rsnapshot/
+
+cmd_rm		/bin/rm
+cmd_rsync	/usr/bin/rsync
+cmd_logger	/usr/bin/logger
+cmd_preexec	/usr/bin/mysqldump --all-databases | gzip -c > /opt/mysqldump.sql.gz
+
+interval	hourly	6
+interval	daily	7
+interval	weekly	4
+
+verbose		2
+loglevel	3
+lockfile	/var/run/rsnapshot.pid
+
+backup	/home/		<%= hostname %>/
+backup	/etc/		<%= hostname %>/
+backup	/var/www/	<%= hostname %>/
+backup	/opt/		<%= hostname %>/
+
